@@ -3,7 +3,7 @@ function back() {
 }
 
 function backTo(n) {
-  window.history.forward();
+  window.history.go();
 }
 
 function forward() {
