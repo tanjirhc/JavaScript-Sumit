@@ -13,5 +13,8 @@ function loadData() {
 
   // send request
   xhr.send();
+
+  // cancel request
+  xhr.abort();
 }
 
