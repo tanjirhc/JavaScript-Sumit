@@ -1,0 +1,8 @@
+const demo = document.getElementById("demo");
+let i = 0;
+
+while(i < 100000000) {
+  i++;
+}
+
+demo.innerHTML = i;
