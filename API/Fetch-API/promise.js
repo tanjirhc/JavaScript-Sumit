@@ -4,7 +4,7 @@ function getData() {
     .then(res => res.text())
     .then(data => {
       console.log("hello 2");
-      
+      display.innerText = data;
     })
 
 
