@@ -10,8 +10,11 @@ function startWorker() {
       w = new Worker("worker.js");
     }
     
-    
 
+    // listening for worker events/message
+    w.onmessage = function(event) {
+      document.getElementById("demo").innerHTML  = event.data;
+    }
   } else {
       alert("Your browser doesn't support web worker!");
   }
