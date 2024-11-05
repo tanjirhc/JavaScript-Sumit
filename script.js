@@ -24,3 +24,15 @@ function getCookie(cname) {
   }
   return "";
 }
+
+function checkCookie(cname, exdays) {
+  let a = getCookie(cname);
+  if (a != "") {
+   alert("Welcome again " + a);
+  } else {
+    name = prompt("Please enter your name:", "");
+    if (name != "" && name != null) {
+      setCookie(cname, name, exdays);
+    }
+  }
+} 
