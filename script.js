@@ -7,5 +7,8 @@ function setCookie(cname, cvalue, exdays) {
 }
 
 function getCookie(cname) {
-  console.log(document.cookie);
+  //name=Tanjir Hasan; username=tanjir
+
+  let ca = document.cookie.split(";");
+  console.log(ca);
 }
