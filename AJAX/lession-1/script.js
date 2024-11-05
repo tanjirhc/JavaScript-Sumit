@@ -9,6 +9,9 @@ function loadData() {
   };
 
   // prepare request - Methods: GET, POST, PUT, PATCH, DELETE, OPTIONS
-  xhr.open();
+  xhr.open("GET", "./data/data.txt");
+
+  // send request
+  xhr.send();
 }
 
