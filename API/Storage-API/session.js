@@ -1,19 +1,19 @@
 function setSessionStorage(name, value) {
-sessionStorage.setItem(name, value);
+  sessionStorage.setItem(name, value);
 }
 
-function getSessionStorage(key) {
+function getSessionStorage(name) {
   alert(`${name} : ${sessionStorage.getItem(name)}`);
 }
 
-function removeSessionStorage(key) {
-  sessionStorage.removeItem(key);
+function removeSessionStorage(name) {
+  sessionStorage.removeItem(name);
 }
 
 function getSessionKeyLength() {
   alert(`sessionStorage has ${sessionStorage.length} keys`);
 }
 
-function clearSessionStorage() {
+function clearStorage() {
   sessionStorage.clear();
 }
