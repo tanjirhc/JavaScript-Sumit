@@ -19,3 +19,13 @@ function startWorker() {
       alert("Your browser doesn't support web worker!");
   }
 }
+
+function stopWorker() {
+  if(typeof Worker !== 'undefined') {
+    //Worker Available
+    w.terminate();
+    w = undefined;
+  } else {
+    alert("Your browser doesn't support web worker!");
+  }
+}
