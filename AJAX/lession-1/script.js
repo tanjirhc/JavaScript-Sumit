@@ -15,6 +15,6 @@ function loadData() {
   xhr.send();
 
   // cancel request
-  xhr.abort();
+  // xhr.abort();
 }
 
