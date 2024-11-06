@@ -3,7 +3,7 @@ function sendRequest(method, url) {
       const xhr = new XMLHttpRequest();
 
       xhr.onload = function() {
-        console.log(this.response);
+        resolve(this.response);
       }
 
       xhr.responseType = "json";
@@ -17,7 +17,9 @@ function sendRequest(method, url) {
 }
 
 function getData() {
-  sendRequest();
+  sendRequest().then(responseData => {
+    console.log(responseData);
+  });
   
 }
 
