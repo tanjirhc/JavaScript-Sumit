@@ -6,6 +6,8 @@ function getData() {
   }
 
   xhr.open("GET", "https://jsonplaceholder.typicode.com/todos/1");
+
+  xhr.send();
 }
 
 function sendData() {
