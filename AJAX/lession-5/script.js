@@ -2,7 +2,7 @@ function getData() {
   const xhr = new XMLHttpRequest();
 
   xhr.onload = function() {
-    console.log(this.responseText);
+    console.log(JSON.parse(this.responseText));
   }
 
   xhr.open("GET", "https://jsonplaceholder.typicode.com/todos/1");
