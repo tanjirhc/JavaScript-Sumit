@@ -1,7 +1,7 @@
-const jsonString = '{"name":"John", "age":30, "city":"New York"}';
+const jsonString = '["Ford", "BMW", "Audi", "Fiat"]';;
 
 console.log(jsonString);
-// conver to valid js object
+// conver to valid js array
 const myObj = JSON.parse(jsonString);
 
 console.log(myObj);
