@@ -7,7 +7,8 @@ function loadData() {
     const  container = document.getElementById('demo');
     container.innerHTML = this.responseText;
 
-    console.log(this.getAllResponseHeaders());
+    //console.log(this.getAllResponseHeaders());
+    console.log(this.getResponseHeader('etag'));
   };
 
   // prepare request - Methods: GET, POST, PUT, PATCH, DELETE, OPTIONS
