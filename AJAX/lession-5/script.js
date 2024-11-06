@@ -17,7 +17,7 @@ function sendRequest(method, url) {
 }
 
 function getData() {
-  sendRequest().then(responseData => {
+  sendRequest("GET", "https://jsonplaceholder.typicode.com/todos/1").then(responseData => {
     console.log(responseData);
   });
   
