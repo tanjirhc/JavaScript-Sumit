@@ -3,6 +3,12 @@ function sendRequest(method, url, data) {
       const xhr = new XMLHttpRequest();
 
       xhr.onload = function() {
+        // handle application error
+        if(this.status >= 400) {
+          reject(
+            `There was an application error and the response status is ${this.status} and response text is ${this.statusText}`
+          );
+        }
         resolve(this.response);
       }
 
@@ -21,7 +27,7 @@ function sendRequest(method, url, data) {
 }
 
 function getData() {
-  sendRequest("GET", "https://jsonplaceholder.typicode.com/todos/1").then(responseData => {
+  sendRequest("GET", "https://jsonplaceholder.typicode.com/todos/test").then(responseData => {
     console.log(responseData);
   }
 )
