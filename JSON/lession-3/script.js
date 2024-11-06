@@ -3,4 +3,4 @@ const jsonString = '{"name":"John", "age":"function () {return 30;}", "city":"Ne
 console.log(jsonString);
 const myObj = JSON.parse(jsonString);
 
-console.log(myObj);
+console.log(myObj.age);
