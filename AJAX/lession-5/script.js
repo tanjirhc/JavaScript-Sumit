@@ -1,4 +1,4 @@
-function sendRequest(method, url) {
+function sendRequest(method, url, data) {
   const promise = new Promise((resolve, reject) => {
       const xhr = new XMLHttpRequest();
 
@@ -10,7 +10,7 @@ function sendRequest(method, url) {
 
       xhr.open(method, url);
 
-      xhr.send();
+      xhr.send(data);
     });
   
     return promise;
@@ -24,7 +24,14 @@ function getData() {
 }
 
 function sendData() {
-
+  sendRequest("POST", "https://jsonplaceholder.typicode.com/posts", JSON.stringify({
+    title: 'foo',
+    body: 'bar',
+    userId: 1,
+  })
+  ).then(responseData => {
+    console.log(responseData);
+  });
 }
 
 const getButton = document.getElementById("get");
