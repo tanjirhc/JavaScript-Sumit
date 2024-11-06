@@ -6,10 +6,12 @@ function sendRequest(method, url, data) {
         // handle application error
         if(this.status >= 400) {
           reject(
-            `There was an application error and the response status is ${this.status} and response text is ${this.statusText}`
+            `There was an application error and the response status is ${this.status}`
           );
+        } else {
+          resolve(this.response);
         }
-        resolve(this.response);
+        
       }
 
       xhr.onerror = function() {
