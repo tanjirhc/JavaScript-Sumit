@@ -23,7 +23,11 @@ function sendRequest(method, url, data) {
 function getData() {
   sendRequest("GET", "https://jsonplaceholder.typicode.com/todos/1").then(responseData => {
     console.log(responseData);
-  });
+  }
+)
+.catch(err => {
+  console.log(err);
+});
   
 }
 
