@@ -6,6 +6,10 @@ function sendRequest(method, url, data) {
         resolve(this.response);
       }
 
+      xhr.onerror = function() {
+        reject("There was an error");
+      }
+
       xhr.responseType = "json";
 
       xhr.open(method, url);
