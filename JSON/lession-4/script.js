@@ -1,4 +1,4 @@
-const obj = {name: "John", age: 30, city: "New York"};
+const obj = ["John", "Peter", "Sally", "Jane"];
 
 console.log(obj);
 
