@@ -1,12 +1,6 @@
-const jsonString = '{"name":"John", "birth": "1986-12-14", "city":"New York"}';
+const jsonString = '{"name":"John", "age":"function () {return 30;}", "city":"New York"}';
 
 console.log(jsonString);
-// conver to valid js array
-const myObj = JSON.parse(jsonString, function(key, value) {
-  if(key === 'birth') { //revive function
-    return new Date(value);
-  } 
-  return value;
-});
+const myObj = JSON.parse(jsonString);
 
 console.log(myObj);
