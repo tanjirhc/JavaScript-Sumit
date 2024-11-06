@@ -2,7 +2,7 @@ function getData() {
   const xhr = new XMLHttpRequest();
 
   xhr.onload = function() {
-    console.log(this.responseText);
+    console.log(this.response);
   }
 
   xhr.responseType = "json";
