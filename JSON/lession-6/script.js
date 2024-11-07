@@ -7,8 +7,5 @@ async function change_myselect(sel) {
       "Content-type": "application/x-www-form-urlencoded"
     },
     body: "x=" + JSON.stringify(dbParam),
-  });
-
-
-  
+  });  
 }
