@@ -5,7 +5,8 @@ async function change_myselect(sel) {
     method: "POST",
     headers: {
       "Content-type": "application/x-www-form-urlencoded"
-    }
+    },
+    body: JSON.stringify();
   });
 
 
